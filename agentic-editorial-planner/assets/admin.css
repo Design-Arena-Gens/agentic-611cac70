@@ -1,0 +1,99 @@
+.aep-board {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+	gap: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+.aep-board__column {
+	background: #fff;
+	border: 1px solid #dcdcdc;
+	border-radius: 6px;
+	display: flex;
+	flex-direction: column;
+	max-height: 75vh;
+}
+
+.aep-board__header {
+	padding: 0.75rem 1rem;
+	border-bottom: 1px solid #e3e3e3;
+	background: #f8f9fb;
+	font-weight: 600;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.aep-board__list {
+	list-style: none;
+	margin: 0;
+	padding: 0.75rem;
+	flex: 1;
+	overflow-y: auto;
+}
+
+.aep-board__card {
+	background: #fdfdfd;
+	border: 1px solid #eaeaea;
+	border-radius: 6px;
+	padding: 0.75rem;
+	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+}
+
+.aep-board__card + .aep-board__card {
+	margin-top: 0.75rem;
+}
+
+.aep-board__meta {
+	display: flex;
+	gap: 0.5rem;
+	flex-wrap: wrap;
+	font-size: 12px;
+	color: #616161;
+}
+
+.aep-board__actions {
+	display: flex;
+	justify-content: flex-end;
+	gap: 0.5rem;
+}
+
+.aep-badge {
+	display: inline-flex;
+	align-items: center;
+	padding: 0.1rem 0.5rem;
+	border-radius: 999px;
+	background: #eef2ff;
+	color: #2a3180;
+	font-weight: 500;
+	font-size: 11px;
+	text-transform: uppercase;
+	letter-spacing: 0.03em;
+}
+
+.aep-empty {
+	margin: 2rem 0;
+	text-align: center;
+	color: #6b6b6b;
+}
+
+.aep-skeleton {
+	height: 112px;
+	border-radius: 6px;
+	background: linear-gradient(90deg, #f2f2f2 25%, #e8e8e8 37%, #f2f2f2 63%);
+	background-size: 400% 100%;
+	animation: aep-shimmer 1.4s ease infinite;
+}
+
+@keyframes aep-shimmer {
+	0% {
+		background-position: 100% 0;
+	}
+	100% {
+		background-position: -100% 0;
+	}
+}
+
